@@ -112,6 +112,10 @@ btnTinhTien.addEventListener(`click`, function(){
             tdKm2.innerHTML = soKm-1;
             tdDonGiaKm2.innerHTML = tuKm2;
             tdThanhTienKm2.innerHTML = (soKm-1)*tuKm2;
+
+            tdKm19.innerHTML = '';
+            tdDonGiaKm19.innerHTML = '';
+            tdThanhTienKm19.innerHTML = '';
         }
         tdThoiGianCho.innerHTML = thoiGianChoE + ' phút';
         tdDonGiaThoiGianCho.innerHTML = thoiGianCho + ' /3 phút';
