@@ -199,11 +199,11 @@ function tinhTienThoiGianCho(loaiXe, soPhutCho){
             return (2000*soPhutCho)/3;
         }
         case UBER_SUV:{
-            return (2500*soPhutCho)/3;
+            return (3000*soPhutCho)/3;
 
         }
         case UBER_BLACK:{
-            return (3000*soPhutCho)/3;
+            return (3500*soPhutCho)/3;
 
 
         }
