@@ -53,11 +53,11 @@ btnTinhTien.addEventListener(`click`, function(){
     xuatTien.innerHTML = tongTien;
 
     btnInHoaDon.addEventListener(`click`, function(){
-        var modal = document.querySelector('.modal');
-        var closeBtn = document.querySelector('.modal-header button');
-        var submitBtn = document.querySelector('.modal-footer button');
+        var modal = document.querySelector('.modal');   
         modal.style.display = 'block';
         modal.style.opacity = 1;
+        var closeBtn = document.querySelector('.modal-header button');
+        var submitBtn = document.querySelector('.modal-footer button');
     
     
 
@@ -95,6 +95,14 @@ btnTinhTien.addEventListener(`click`, function(){
             tdKm1.innerHTML = soKm;
             tdDonGiaKm1.innerHTML = kmDauTien;
             tdThanhTienKm1.innerHTML = soKm*kmDauTien;
+
+            tdKm2.innerHTML = '';
+            tdDonGiaKm2.innerHTML = '';
+            tdThanhTienKm2.innerHTML = '';
+
+            tdKm19.innerHTML = '';
+            tdDonGiaKm19.innerHTML = '';
+            tdThanhTienKm19.innerHTML = '';
         }
         else{
             tdKm1.innerHTML = soKm-(soKm-1);
