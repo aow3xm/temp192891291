@@ -119,7 +119,7 @@ btnTinhTien.addEventListener(`click`, function(){
         }
         tdThoiGianCho.innerHTML = thoiGianChoE + ' phút';
         tdDonGiaThoiGianCho.innerHTML = thoiGianCho + ' /3 phút';
-        tdThanhTienThoiGianCho.innerHTML = Math.round(tinhTienThoiGianCho(option, thoiGianChoE)/1000)*1000;
+        tdThanhTienThoiGianCho.innerHTML = tinhTienThoiGianCho(option, thoiGianChoE);
  
         tdThanhTien = document.querySelector('table .thanhTien');
         tdThanhTien.innerHTML = tongTien;
@@ -194,19 +194,36 @@ function tinhThoiGianCho(loaiXe){
     }
 }
 function tinhTienThoiGianCho(loaiXe, soPhutCho){
-    switch(loaiXe){
-        case UBER_CAR:{
-            return (2000*soPhutCho)/3;
-        }
-        case UBER_SUV:{
-            return (3000*soPhutCho)/3;
-
-        }
-        case UBER_BLACK:{
-            return (3500*soPhutCho)/3;
-
-
+    if(soPhutCho % 3 == 0){
+        switch(loaiXe){
+            case UBER_CAR:{
+                return (2000*soPhutCho)/3;
+            }
+            case UBER_SUV:{
+                return (3000*soPhutCho)/3;
+    
+            }
+            case UBER_BLACK:{
+                return (3500*soPhutCho)/3;
+    
+    
+            }
         }
     }
+    else{
+        var t = soPhutCho - soPhutCho % 3;
+        switch(loaiXe){
+        case UBER_CAR:{
+            return (2000*t)/3;
+        }
+        case UBER_SUV:{
+            return (3000*t)/3;
+        }
+        case UBER_BLACK:{
+            return (3500*t)/3;
+        }
+    }
+    }
+
 }
 
