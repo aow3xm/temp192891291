@@ -79,17 +79,17 @@ btnTinhTien.addEventListener(`click`, function(){
         var tdThanhTienThoiGianCho = document.querySelector('table .thanhTienThoiGianCho');
 
         if(soKm > 19){
-            tdKm1.innerHTML = soKm-(soKm-1);
+            tdKm1.innerHTML = 1;
             tdDonGiaKm1.innerHTML = kmDauTien;
             tdThanhTienKm1.innerHTML = 1*kmDauTien;
-
-            tdKm2.innerHTML = soKm-(soKm-19);
+        
+            tdKm2.innerHTML = 18;
             tdDonGiaKm2.innerHTML = tuKm2;
-            tdThanhTienKm2.innerHTML = (soKm-(soKm-19))*tuKm2;
-
-            tdKm19.innerHTML = soKm-20;
+            tdThanhTienKm2.innerHTML = 18*tuKm2;
+        
+            tdKm19.innerHTML = soKm-19;
             tdDonGiaKm19.innerHTML = tuKm19;
-            tdThanhTienKm19.innerHTML = (soKm-20)*tuKm19;
+            tdThanhTienKm19.innerHTML = (soKm-19)*tuKm19;
         }
         else if(soKm <= 1){
             tdKm1.innerHTML = soKm;
